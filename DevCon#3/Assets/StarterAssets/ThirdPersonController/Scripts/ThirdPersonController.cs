@@ -110,6 +110,12 @@ namespace StarterAssets
 
         private bool _hasAnimator;
 
+
+        //Return later to reference other script to change mass
+        //massScript = FindObjectOfType>();
+
+        //public massController massController;
+
         private bool IsCurrentDeviceMouse
         {
             get
@@ -135,7 +141,7 @@ namespace StarterAssets
         private void Start()
         {
             _cinemachineTargetYaw = CinemachineCameraTarget.transform.rotation.eulerAngles.y;
-            
+
             _hasAnimator = TryGetComponent(out _animator);
             _controller = GetComponent<CharacterController>();
             _input = GetComponent<StarterAssetsInputs>();
@@ -150,6 +156,10 @@ namespace StarterAssets
             // reset our timeouts on start
             _jumpTimeoutDelta = JumpTimeout;
             _fallTimeoutDelta = FallTimeout;
+
+            //Placement for mass controller variables
+           // massController = GameObject.Find("WeightModel").
+                //GetComponent<Rigidbody>();
         }
 
         private void Update()
@@ -387,6 +397,16 @@ namespace StarterAssets
             {
                 AudioSource.PlayClipAtPoint(LandingAudioClip, transform.TransformPoint(_controller.center), FootstepAudioVolume);
             }
+        }
+
+        //Mass control input controls
+        private void MassControl()
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+             
+            }
+
         }
     }
 }
