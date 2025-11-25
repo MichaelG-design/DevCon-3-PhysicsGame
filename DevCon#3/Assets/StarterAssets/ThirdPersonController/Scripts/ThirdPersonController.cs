@@ -112,9 +112,9 @@ namespace StarterAssets
 
 
         //Return later to reference other script to change mass
-        //massScript = FindObjectOfType>();
+        //massController = FindObjectOfType>();
 
-        //public massController massController;
+        public MassAndSize massController;
 
         private bool IsCurrentDeviceMouse
         {
@@ -158,8 +158,8 @@ namespace StarterAssets
             _fallTimeoutDelta = FallTimeout;
 
             //Placement for mass controller variables
-           // massController = GameObject.Find("WeightModel").
-                //GetComponent<Rigidbody>();
+           massController = GameObject.Find("WeightModel").GetComponentInChildren<MassAndSize>();
+                
         }
 
         private void Update()
@@ -169,6 +169,7 @@ namespace StarterAssets
             JumpAndGravity();
             GroundedCheck();
             Move();
+            MassControl();
         }
 
         private void LateUpdate()
@@ -404,7 +405,12 @@ namespace StarterAssets
         {
             if (Input.GetMouseButtonDown(0))
             {
-             
+                massController.currentMass += 6;
+            }
+
+            if (Input.GetMouseButtonDown(1))
+            {
+                massController.currentMass -= 6;
             }
 
         }
