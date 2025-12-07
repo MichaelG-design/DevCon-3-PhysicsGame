@@ -115,6 +115,8 @@ namespace StarterAssets
         //massController = FindObjectOfType>();
 
         public MassAndSize massController;
+        public MassAndSize scaleController;
+
 
         private bool IsCurrentDeviceMouse
         {
@@ -159,7 +161,7 @@ namespace StarterAssets
 
             //Placement for mass controller variables
            massController = GameObject.Find("WeightModel").GetComponentInChildren<MassAndSize>();
-                
+           scaleController = GameObject.Find("WeightModel").GetComponentInChildren<MassAndSize>();
         }
 
         private void Update()
@@ -406,11 +408,17 @@ namespace StarterAssets
             if (Input.GetMouseButtonDown(0))
             {
                 massController.currentMass += 6;
+                scaleController.currentScale.x += 0.2f;
+                scaleController.currentScale.y += 0.2f;
+                scaleController.currentScale.z += 0.2f;
             }
 
             if (Input.GetMouseButtonDown(1))
             {
                 massController.currentMass -= 6;
+                scaleController.currentScale.x -= 0.2f;
+                scaleController.currentScale.y -= 0.2f;
+                scaleController.currentScale.z -= 0.2f;
             }
 
         }

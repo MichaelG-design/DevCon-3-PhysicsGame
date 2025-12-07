@@ -2051,8 +2051,20 @@ PrefabInstance:
       value: PlayerArmature
       objectReference: {fileID: 0}
     - target: {fileID: 4416926081852918490, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
+      propertyPath: massController
+      value: 
+      objectReference: {fileID: 1594738474}
+    - target: {fileID: 4416926081852918490, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
+      propertyPath: scaleController
+      value: 
+      objectReference: {fileID: 1594738474}
+    - target: {fileID: 4416926081852918490, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
       propertyPath: LockCameraPosition
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4416926081852918491, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 5885216827943657505, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
       propertyPath: canPush
@@ -2060,11 +2072,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5885216827943657505, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
       propertyPath: strength
-      value: 0.58
+      value: 1.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 3893294197879345259, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
+      insertIndex: 0
+      addedObject: {fileID: 1031322397}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4416926081852918481, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
       insertIndex: -1
@@ -2099,14 +2114,19 @@ Rigidbody:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
+--- !u!4 &244738771 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3893294197879345259, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
+  m_PrefabInstance: {fileID: 244738761}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &251904395
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2905,7 +2925,7 @@ Transform:
   m_GameObject: {fileID: 370841522}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.9995307, z: -0, w: -0.030633878}
-  m_LocalPosition: {x: -43.8, y: -1.6535659, z: 68.5}
+  m_LocalPosition: {x: -43.8, y: -1.435, z: 68.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5633,9 +5653,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chainlink (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8632229036493095241, guid: 154e5905143124c438c06105257ef365, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8971177321638370291, guid: 154e5905143124c438c06105257ef365, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.7765992
+      value: -2.776598
       objectReference: {fileID: 0}
     - target: {fileID: 8971177321638370291, guid: 154e5905143124c438c06105257ef365, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5643,15 +5667,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8971177321638370291, guid: 154e5905143124c438c06105257ef365, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.8758018
+      value: -0.8758043
       objectReference: {fileID: 0}
     - target: {fileID: 8971177321638370291, guid: 154e5905143124c438c06105257ef365, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.51583916
+      value: 0.5158391
       objectReference: {fileID: 0}
     - target: {fileID: 8971177321638370291, guid: 154e5905143124c438c06105257ef365, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.51583916
+      value: -0.5158392
       objectReference: {fileID: 0}
     - target: {fileID: 8971177321638370291, guid: 154e5905143124c438c06105257ef365, type: 3}
       propertyPath: m_LocalRotation.y
@@ -5659,7 +5683,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8971177321638370291, guid: 154e5905143124c438c06105257ef365, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.4836424
+      value: -0.48364243
       objectReference: {fileID: 0}
     - target: {fileID: 8971177321638370291, guid: 154e5905143124c438c06105257ef365, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -5721,9 +5745,9 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
-  m_CollisionDetection: 1
+  m_CollisionDetection: 2
 --- !u!144 &577050563
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -5736,37 +5760,37 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0.325, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0.77900016, z: 0.00000011920929}
+  m_ConnectedAnchor: {x: -0.0000011920929, y: 0.77899945, z: 0.00000011920929}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
-    spring: 0
+    spring: 20
     damper: 0
   m_LowTwistLimit:
     limit: -20
     bounciness: 0
-    contactDistance: 0
+    contactDistance: 10
   m_HighTwistLimit:
     limit: 70
     bounciness: 0
     contactDistance: 0
   m_SwingLimitSpring:
-    spring: 0
-    damper: 0
+    spring: 20
+    damper: 1.8
   m_Swing1Limit:
     limit: 40
     bounciness: 0
-    contactDistance: 0
+    contactDistance: 10
   m_Swing2Limit:
     limit: 40
     bounciness: 0
-    contactDistance: 0
+    contactDistance: 10.01
   m_EnableProjection: 0
   m_ProjectionDistance: 0.1
   m_ProjectionAngle: 180
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_EnableCollision: 0
+  m_EnableCollision: 1
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
@@ -10529,6 +10553,59 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2059123736372026880, guid: de9965ab6b3d5294b8e15dd28fe4d6cd, type: 3}
   m_PrefabInstance: {fileID: 1026195208}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1031322396
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1031322397}
+  - component: {fileID: 1031322398}
+  m_Layer: 0
+  m_Name: Launch collider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1031322397
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1031322396}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.89, z: 0.582}
+  m_LocalScale: {x: 1, y: 1.8, z: 0.63}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 244738771}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1031322398
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1031322396}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1034083587
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12281,9 +12358,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chainlink (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 8632229036493095241, guid: 154e5905143124c438c06105257ef365, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8971177321638370291, guid: 154e5905143124c438c06105257ef365, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.7765992
+      value: -2.7765987
       objectReference: {fileID: 0}
     - target: {fileID: 8971177321638370291, guid: 154e5905143124c438c06105257ef365, type: 3}
       propertyPath: m_LocalPosition.y
@@ -12291,7 +12372,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8971177321638370291, guid: 154e5905143124c438c06105257ef365, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.3218018
+      value: -1.3218014
       objectReference: {fileID: 0}
     - target: {fileID: 8971177321638370291, guid: 154e5905143124c438c06105257ef365, type: 3}
       propertyPath: m_LocalRotation.w
@@ -12299,7 +12380,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8971177321638370291, guid: 154e5905143124c438c06105257ef365, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.7052091
+      value: -0.705209
       objectReference: {fileID: 0}
     - target: {fileID: 8971177321638370291, guid: 154e5905143124c438c06105257ef365, type: 3}
       propertyPath: m_LocalRotation.y
@@ -12307,7 +12388,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8971177321638370291, guid: 154e5905143124c438c06105257ef365, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.051770873
+      value: 0.051770877
       objectReference: {fileID: 0}
     - target: {fileID: 8971177321638370291, guid: 154e5905143124c438c06105257ef365, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -12369,9 +12450,9 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
-  m_CollisionDetection: 1
+  m_CollisionDetection: 2
 --- !u!144 &1157520203
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -12384,37 +12465,37 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0.3250002, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0.77100027, z: 0}
+  m_ConnectedAnchor: {x: 0.00000013810177, y: 0.7710036, z: 0.0000021457672}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
-    spring: 0
+    spring: 20
     damper: 0
   m_LowTwistLimit:
     limit: -20
     bounciness: 0
-    contactDistance: 0
+    contactDistance: 10
   m_HighTwistLimit:
     limit: 70
     bounciness: 0
     contactDistance: 0
   m_SwingLimitSpring:
-    spring: 0
-    damper: 0
+    spring: 20
+    damper: 1.8
   m_Swing1Limit:
     limit: 40
     bounciness: 0
-    contactDistance: 0
+    contactDistance: 10
   m_Swing2Limit:
     limit: 40
     bounciness: 0
-    contactDistance: 0
+    contactDistance: 10.01
   m_EnableProjection: 0
   m_ProjectionDistance: 0.1
   m_ProjectionAngle: 180
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_EnableCollision: 0
+  m_EnableCollision: 1
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
@@ -13726,9 +13807,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chainlink
       objectReference: {fileID: 0}
+    - target: {fileID: 8632229036493095241, guid: 154e5905143124c438c06105257ef365, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8971177321638370291, guid: 154e5905143124c438c06105257ef365, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.8006139
+      value: -2.8006136
       objectReference: {fileID: 0}
     - target: {fileID: 8971177321638370291, guid: 154e5905143124c438c06105257ef365, type: 3}
       propertyPath: m_LocalPosition.y
@@ -13736,7 +13821,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8971177321638370291, guid: 154e5905143124c438c06105257ef365, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.39506137
+      value: 0.3950612
       objectReference: {fileID: 0}
     - target: {fileID: 8971177321638370291, guid: 154e5905143124c438c06105257ef365, type: 3}
       propertyPath: m_LocalRotation.w
@@ -13748,11 +13833,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8971177321638370291, guid: 154e5905143124c438c06105257ef365, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0.0000000018626451
       objectReference: {fileID: 0}
     - target: {fileID: 8971177321638370291, guid: 154e5905143124c438c06105257ef365, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0.0000000018626451
       objectReference: {fileID: 0}
     - target: {fileID: 8971177321638370291, guid: 154e5905143124c438c06105257ef365, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -13814,9 +13899,9 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
-  m_CollisionDetection: 1
+  m_CollisionDetection: 2
 --- !u!144 &1259715845
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -13829,37 +13914,37 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0.32500008, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.029237986, y: 0.46299958, z: -0.865137}
+  m_ConnectedAnchor: {x: -0.008526161, y: 0.2915658, z: -0.7765386}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
-    spring: 0
+    spring: 20
     damper: 0
   m_LowTwistLimit:
     limit: -20
     bounciness: 0
-    contactDistance: 0
+    contactDistance: 10
   m_HighTwistLimit:
     limit: 70
     bounciness: 0
     contactDistance: 0
   m_SwingLimitSpring:
-    spring: 0
-    damper: 0
+    spring: 20
+    damper: 1.8
   m_Swing1Limit:
     limit: 40
     bounciness: 0
-    contactDistance: 0
+    contactDistance: 10
   m_Swing2Limit:
     limit: 40
     bounciness: 0
-    contactDistance: 0
+    contactDistance: 10.01
   m_EnableProjection: 0
   m_ProjectionDistance: 0.1
   m_ProjectionAngle: 180
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_EnableCollision: 0
+  m_EnableCollision: 1
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
@@ -16980,9 +17065,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chainlink (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8632229036493095241, guid: 154e5905143124c438c06105257ef365, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8971177321638370291, guid: 154e5905143124c438c06105257ef365, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.7765992
+      value: -2.776599
       objectReference: {fileID: 0}
     - target: {fileID: 8971177321638370291, guid: 154e5905143124c438c06105257ef365, type: 3}
       propertyPath: m_LocalPosition.y
@@ -16990,15 +17079,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8971177321638370291, guid: 154e5905143124c438c06105257ef365, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.025198221
+      value: 0.025201619
       objectReference: {fileID: 0}
     - target: {fileID: 8971177321638370291, guid: 154e5905143124c438c06105257ef365, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.51583916
+      value: 0.5158391
       objectReference: {fileID: 0}
     - target: {fileID: 8971177321638370291, guid: 154e5905143124c438c06105257ef365, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.51583916
+      value: -0.5158392
       objectReference: {fileID: 0}
     - target: {fileID: 8971177321638370291, guid: 154e5905143124c438c06105257ef365, type: 3}
       propertyPath: m_LocalRotation.y
@@ -17006,7 +17095,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8971177321638370291, guid: 154e5905143124c438c06105257ef365, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.4836424
+      value: -0.48364243
       objectReference: {fileID: 0}
     - target: {fileID: 8971177321638370291, guid: 154e5905143124c438c06105257ef365, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -17068,9 +17157,9 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
-  m_CollisionDetection: 1
+  m_CollisionDetection: 2
 --- !u!144 &1548280839
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -17083,37 +17172,37 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0.325, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.024014711, y: 0.6948632, z: 0.0000005364418}
+  m_ConnectedAnchor: {x: 0.024012804, y: 0.6948642, z: 0.0000005364418}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
-    spring: 0
+    spring: 20
     damper: 0
   m_LowTwistLimit:
     limit: -20
     bounciness: 0
-    contactDistance: 0
+    contactDistance: 10
   m_HighTwistLimit:
     limit: 70
     bounciness: 0
     contactDistance: 0
   m_SwingLimitSpring:
-    spring: 0
-    damper: 0
+    spring: 20
+    damper: 1.8
   m_Swing1Limit:
     limit: 40
     bounciness: 0
-    contactDistance: 0
+    contactDistance: 10
   m_Swing2Limit:
     limit: 40
     bounciness: 0
-    contactDistance: 0
+    contactDistance: 10.01
   m_EnableProjection: 0
   m_ProjectionDistance: 0.1
   m_ProjectionAngle: 180
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_EnableCollision: 0
+  m_EnableCollision: 1
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
@@ -17713,8 +17802,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 370841523}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 744685ad04038fe40aba8abfb572ec25, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 744685ad04038fe40aba8abfb572ec25, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 744685ad04038fe40aba8abfb572ec25, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 744685ad04038fe40aba8abfb572ec25, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.767376
+      value: -2.7673779
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 744685ad04038fe40aba8abfb572ec25, type: 3}
       propertyPath: m_LocalPosition.y
@@ -17722,7 +17823,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 744685ad04038fe40aba8abfb572ec25, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.8568019
+      value: -1.8568021
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 744685ad04038fe40aba8abfb572ec25, type: 3}
       propertyPath: m_LocalRotation.w
@@ -17752,9 +17853,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 83.352
       objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 744685ad04038fe40aba8abfb572ec25, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 744685ad04038fe40aba8abfb572ec25, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 744685ad04038fe40aba8abfb572ec25, type: 3}
       propertyPath: m_Name
       value: WeightModel
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 744685ad04038fe40aba8abfb572ec25, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17796,6 +17909,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentMass: 0
+  currentScale: {x: 0, y: 0, z: 0}
 --- !u!144 &1594738475
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -17808,37 +17922,37 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0.30000058, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.27781758, y: 0.53500015, z: 0.09532556}
+  m_ConnectedAnchor: {x: -0.27781618, y: 0.5349987, z: 0.09532535}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
-    spring: 0
+    spring: 20
     damper: 0
   m_LowTwistLimit:
     limit: -20
     bounciness: 0
-    contactDistance: 0
+    contactDistance: 10
   m_HighTwistLimit:
     limit: 70
     bounciness: 0
     contactDistance: 0
   m_SwingLimitSpring:
-    spring: 0
-    damper: 0
+    spring: 20
+    damper: 1.8
   m_Swing1Limit:
     limit: 40
     bounciness: 0
-    contactDistance: 0
+    contactDistance: 10
   m_Swing2Limit:
     limit: 40
     bounciness: 0
-    contactDistance: 0
+    contactDistance: 10.01
   m_EnableProjection: 0
   m_ProjectionDistance: 0.1
   m_ProjectionAngle: 180
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_EnableCollision: 0
+  m_EnableCollision: 1
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
@@ -17890,7 +18004,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 1
+  m_CollisionDetection: 2
 --- !u!1001 &1596727658
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18586,9 +18700,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chainlink (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8632229036493095241, guid: 154e5905143124c438c06105257ef365, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8971177321638370291, guid: 154e5905143124c438c06105257ef365, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.7765992
+      value: -2.7765987
       objectReference: {fileID: 0}
     - target: {fileID: 8971177321638370291, guid: 154e5905143124c438c06105257ef365, type: 3}
       propertyPath: m_LocalPosition.y
@@ -18596,7 +18714,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8971177321638370291, guid: 154e5905143124c438c06105257ef365, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.4218018
+      value: -0.42180437
       objectReference: {fileID: 0}
     - target: {fileID: 8971177321638370291, guid: 154e5905143124c438c06105257ef365, type: 3}
       propertyPath: m_LocalRotation.w
@@ -18608,11 +18726,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8971177321638370291, guid: 154e5905143124c438c06105257ef365, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0.0000000018626451
       objectReference: {fileID: 0}
     - target: {fileID: 8971177321638370291, guid: 154e5905143124c438c06105257ef365, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0.0000000018626451
       objectReference: {fileID: 0}
     - target: {fileID: 8971177321638370291, guid: 154e5905143124c438c06105257ef365, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -18674,9 +18792,9 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
-  m_CollisionDetection: 1
+  m_CollisionDetection: 2
 --- !u!144 &1639259493
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -18689,37 +18807,37 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0.32500008, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0.7720002, z: 0}
+  m_ConnectedAnchor: {x: 0.00000009206792, y: 0.77199906, z: 0.0000014305115}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
-    spring: 0
+    spring: 20
     damper: 0
   m_LowTwistLimit:
     limit: -20
     bounciness: 0
-    contactDistance: 0
+    contactDistance: 10
   m_HighTwistLimit:
     limit: 70
     bounciness: 0
     contactDistance: 0
   m_SwingLimitSpring:
-    spring: 0
-    damper: 0
+    spring: 20
+    damper: 1.8
   m_Swing1Limit:
     limit: 40
     bounciness: 0
-    contactDistance: 0
+    contactDistance: 10
   m_Swing2Limit:
     limit: 40
     bounciness: 0
-    contactDistance: 0
+    contactDistance: 10.01
   m_EnableProjection: 0
   m_ProjectionDistance: 0.1
   m_ProjectionAngle: 180
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_EnableCollision: 0
+  m_EnableCollision: 1
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
